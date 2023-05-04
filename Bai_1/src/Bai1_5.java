@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Bai1_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập tháng: ");;
+        System.out.println("Nhập tháng: ");
         int month = sc.nextInt();
         switch (month) {
             case 1:
