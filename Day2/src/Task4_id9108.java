@@ -14,7 +14,7 @@ public class Task4_id9108 {
         switch (choice) {
             case 1:
                 for (int i = 0; i < 4; i++) {
-                    for (int j = 0; j < 4; j++) {
+                    for (int j = i; j < 4; j++) {
                         System.out.printf(" * ");
                     }
                     System.out.println();
