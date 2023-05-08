@@ -13,8 +13,13 @@ public class Task2_id9146 {
 
         System.out.println(pt.a+"x^2 + "+pt.b+"x + "+c+" = 0");
         System.out.println(pt.getDiscriminant());
-        System.out.println(pt.getRoot1());
-        System.out.println(pt.getRoot2());
+        if (pt.getDiscriminant() > 0) {
+            System.out.println(pt.getRoot1());
+            System.out.println(pt.getRoot2());
+        } else if (pt.getDiscriminant() == 0)
+            System.out.println(pt.getRoot1());
+        else
+            System.out.println("No root");
     }
 }
 
