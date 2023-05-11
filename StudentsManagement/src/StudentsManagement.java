@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
 public class StudentsManagement {
-    Student[] students = new Student[0];
+    Student[] students = new Student[2];
+
+    {
+        students[0] = new Student(1, "Long", 27);
+        students[1] = new Student(2, "Duyên", 26);
+    }
+
     Scanner sc = new Scanner(System.in);
 
     public void show() {
@@ -92,9 +98,25 @@ public class StudentsManagement {
             if (i < idx)
                 newStudents[i] = students[i];
             else
-                newStudents[i] = students[i+1];
+                newStudents[i] = students[i + 1];
         }
 
         students = newStudents;
+    }
+
+    public void find() {
+
+    }
+
+    public void sort() {
+        for (int i = 0; i < students.length - 1; i++) {
+            for (int j = i + 1; j < students.length; j++) {
+                if (students[i].getAge() > students[j].getAge()) {
+                    Student newStudent = students[i];
+                    students[i] = students[j];
+                    students[j] = newStudent;
+                }
+            }
+        }
     }
 }
