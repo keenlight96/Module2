@@ -1,7 +1,7 @@
 package Task4_id9187.Shape;
 
 public class Rectangle extends Shape implements Resizable {
-    double width, length;
+    public double width, length;
 
     public Rectangle() {
         width = 1;
