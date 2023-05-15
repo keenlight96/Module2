@@ -13,7 +13,10 @@ public class Main {
             System.out.println("2. Add an employee");
             System.out.println("3. Calculate salary of all employees");
             System.out.println("4. Delete an employee");
-            System.out.println("5. Exit");
+            System.out.println("5. Edit an employee");
+            System.out.println("6. Search an employee");
+            System.out.println("7. Sort employees by age");
+            System.out.println("8. Exit");
             System.out.println("------------------------");
             choice = Integer.parseInt(sc.nextLine());
 
@@ -31,6 +34,15 @@ public class Main {
                     management.del();
                     break;
                 case 5:
+                    management.edit();
+                    break;
+                case 6:
+                    management.search();
+                    break;
+                case 7:
+                    management.sort();
+                    break;
+                case 8:
                     System.exit(0);
             }
         }
