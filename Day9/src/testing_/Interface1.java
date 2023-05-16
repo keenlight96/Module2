@@ -1,4 +1,4 @@
-package test;
+package testing_;
 
 public interface Interface1 {
     void med1();

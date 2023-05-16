@@ -1,4 +1,4 @@
-package test;
+package testing_;
 
 public class Class1 extends Abstract1{
     @Override
