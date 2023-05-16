@@ -87,7 +87,7 @@ public class Main {
                         if (isLeapYear(date.getYear()))     //
                             date.setDay(29 + 1 + date.getDay());        //
                         else        //
-                            date.setDay(8 + 1 + date.getDay());     //
+                            date.setDay(28 + 1 + date.getDay());     //
                         if (date.getDay() == 0)
                             date.setDay(-1);
                     }
