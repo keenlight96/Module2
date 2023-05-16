@@ -7,8 +7,11 @@ public class Main {
         FDate date = InputDate();
         System.out.println(date);
 
-        FDate newDate = nextDay(date);
-        System.out.println(newDate);
+        FDate formatDate = formatDate(date);
+        System.out.println("Current date: "+ formatDate);
+
+        formatDate.setDay(formatDate.getDay() + 1);
+        System.out.println("Next date: " + formatDate);
 
     }
 
@@ -26,8 +29,7 @@ public class Main {
         return false;
     }
 
-    public static FDate nextDay(FDate date) {
-        date.setDay(date.getDay() + 1);
+    public static FDate formatDate(FDate date) {
 
         while (!checkFormatDate(date)) {
             if (date.getMonth() > 12) {
