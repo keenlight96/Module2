@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Current date: "+ formatDate);
 
         formatDate.setDay(formatDate.getDay() + 1);
+        formatDate = formatDate(formatDate);
         System.out.println("Next date: " + formatDate);
 
     }
