@@ -114,7 +114,7 @@ public class Main {
                 case 11:
                     if (date.getDay() > 30) {
                         date.setMonth(date.getMonth() + 1);
-                        date.setDay(date.getDay() - 31);
+                        date.setDay(date.getDay() - 30);
                     } else if (date.getDay() < 1) {
                         date.setMonth(date.getMonth() - 1);
                         if (date.getMonth() == 0)
