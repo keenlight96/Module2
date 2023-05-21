@@ -117,4 +117,22 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
             rightMostParent.right = rightMost.left;
         }
     }
+
+    public TreeNode<E> search(E e) {
+        TreeNode<E> current = root;
+        while (current.element != e) {
+            if (e.compareTo(current.element) < 0) {
+                current = current.left;
+            } else if (e.compareTo(current.element) > 0) {
+                current = current.right;
+            }
+            if (current == null) {
+                System.out.println("No element");
+                return null;
+            }
+        }
+        System.out.println(current.element);
+        System.out.println(current);
+        return current;
+    }
 }
