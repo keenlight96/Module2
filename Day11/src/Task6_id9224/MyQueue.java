@@ -57,5 +57,6 @@ public class MyQueue {
             arr[i] = arr[i+1];
         }
         arr[tail] = 0;
+        size--;
     }
 }
