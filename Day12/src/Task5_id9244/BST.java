@@ -74,6 +74,18 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
         System.out.println(root.element + " ");
     }
 
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    public void preOrder(TreeNode<E> root) {
+        if (root == null)
+            return;
+        System.out.println(root.element + " ");
+        postOrder(root.left);
+        postOrder(root.right);
+    }
+
     public void delete(E e) {
         TreeNode<E> current = root;
         TreeNode<E> parent = null;
