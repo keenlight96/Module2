@@ -1,6 +1,6 @@
 package Task4_id9240;
 
-public class Product {
+public class Product implements Comparable<Product>{
     public static int count = 0;
     private int id;
     private String name;
@@ -47,5 +47,9 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+    @Override
+    public int compareTo(Product o) {
+        return o.getPrice() - getPrice();
     }
 }
