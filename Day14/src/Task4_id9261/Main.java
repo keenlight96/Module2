@@ -1,4 +1,4 @@
-package Task3_id9882;
+package Task4_id9261;
 
 import java.util.Scanner;
 
@@ -13,29 +13,27 @@ public class Main {
             ar[i] = sc.nextInt();
         }
 
-        selectionSort(ar);
+        insertionSort(ar);
         show(ar);
     }
 
-    public static void selectionSort(int[] array) {
-        int min;
-        int index;
-        for (int i = 0; i < array.length - 1; i++) {
-            min = array[i];
-            index = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min) {
-                    min = array[j];
-                    index = j;
-                }
+    public static void insertionSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int temp = array[i];
+            int j;
+            for (j = i - 1; j >= 0; j--) {
+                System.out.print("i = " + i+ ", j = " + j+ " , temp = " + temp + " : " );
+                show(array);
+                System.out.println();
+                if (temp < array[j])
+                    array[j + 1] = array[j];
+                else
+                    break;
             }
-
-            if (array[i] != min) {
-                int temp = array[i];
-                array[i] = array[index];
-                array[index] = temp;
-            }
-
+            array[j + 1] = temp;
+            System.out.print("i = " + i+ ", j = " + j+ " , temp = " + temp + " : " );
+            show(array);
+            System.out.println();
         }
     }
 
