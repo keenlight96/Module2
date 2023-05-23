@@ -13,14 +13,14 @@ public class Main {
             ar[i] = sc.nextInt();
         }
 
-        bubbleSortByStep(ar);
+        bubbleSortByStepType2(ar);
 
         for (int i = 0; i < ar.length; i++) {
             System.out.print(ar[i] + " ");
         }
     }
 
-    public static void bubbleSortByStep(int[] array) {
+    public static void bubbleSortByStepType1(int[] array) {
         boolean isSorted = false;
         for (int i = 0; i < array.length - 1 && !isSorted; i++) {
             isSorted = true;
@@ -37,7 +37,25 @@ public class Main {
                 System.out.println();
             }
         }
-        System.out.println(isSorted);
+    }
+
+    public static void bubbleSortByStepType2(int[] array) {
+        boolean isSorted = false;
+        for (int i = 1; i < array.length && !isSorted; i++) {
+            isSorted = true;
+            for (int j = 0; j < array.length - i; j++) {
+                System.out.print("i = " + i + ", j = " + j + " : ");
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+
+                    isSorted = false;
+                }
+                show(array);
+                System.out.println();
+            }
+        }
     }
 
     public static void show(int[] array) {
