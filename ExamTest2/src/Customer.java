@@ -39,7 +39,7 @@ public class Customer {
     }
 
     public int getIdVaccine() {
-        return ++idVaccine;
+        return idVaccine;
     }
 
     public void setIdVaccine(int idVaccine) {

@@ -42,7 +42,7 @@ public class Management {
             try {
                 System.out.print("Input " + input + ": ");
                 return Double.parseDouble(scanner.nextLine());
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("Wrong format input");
             }
         }
@@ -53,7 +53,7 @@ public class Management {
             try {
                 System.out.print("Input " + input + ": ");
                 return Integer.parseInt(scanner.nextLine());
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("Wrong format input");
             }
         }
@@ -86,7 +86,7 @@ public class Management {
     }
 
     public void add() {
-        customers.add(new Customer(inputString("name"),inputString("phone")));
+        customers.add(new Customer(inputString("name"), inputString("phone")));
     }
 
     public void vaccinate() {
@@ -98,16 +98,15 @@ public class Management {
                     customers) {
                 if (e.getName().equals(name)) {
                     check = true;
-                    e.vaccinate(new Vaccine(e.getIdVaccine(),inputString("vaccine name"),inputDate("manufactured date"),
-                            inputDouble("price"),inputDate("injection date")));
+                    e.vaccinate(new Vaccine(e.getIdVaccine() + 1, inputString("vaccine name"), inputDate("manufactured date"),
+                            inputDouble("price"), inputDate("injection date")));
                 }
             }
 
             if (check) {
                 System.out.println("Customer has been vaccinated");
                 break;
-            }
-            else
+            } else
                 System.out.println("Customer not found");
         }
 
