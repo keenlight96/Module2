@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Vaccine {
+
     private int id;
     private String name;
     private Date dateVaccine;
