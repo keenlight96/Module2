@@ -98,7 +98,7 @@ public class Management {
                     customers) {
                 if (e.getName().equals(name)) {
                     check = true;
-                    e.vaccinate(new Vaccine(e.getIdVaccine() + 1, inputString("vaccine name"), inputDate("manufactured date"),
+                    e.vaccinate(new Vaccine(e.getIdVaccine(), inputString("vaccine name"), inputDate("manufactured date"),
                             inputDouble("price"), inputDate("injection date")));
                 }
             }
