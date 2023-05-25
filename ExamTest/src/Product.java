@@ -63,4 +63,8 @@ public class Product {
                 "}\n", id, name, price, quantity, description);
 
     }
+
+    public String write() {
+        return id + "," + name + "," + price + "," + quantity + "," + description;
+    }
 }

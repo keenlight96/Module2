@@ -1,0 +1,8 @@
+M1,Milk type 1,251000,32,Imported milk
+A1,Táo mèo,35000,83,Domestic alcohol
+A2,Whiskey,1475000,73,Imported alcohol
+B1,Tiger Beer,15000,302,Domestic beer
+B2,Hanoi Beer,10000,331,Domestic beer
+A3,Drum,2050000,15,Imported alcohol
+A4,Chivas,4320000,17,Imported alcohol
+M2,Milk type 2,171000,25,Imported milk

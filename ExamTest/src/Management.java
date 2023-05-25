@@ -1,21 +1,18 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Management {
     Scanner scanner = new Scanner(System.in);
-    ArrayList<Product> list = new ArrayList<>();
+    List<Product> list = FileReadWrite.read();
 
     public Management() {
-        list.add(new Product("M1", "Milk type 1", 251000, 32, "Imported milk"));
-        list.add(new Product("A1", "Táo mèo", 35000, 83, "Domestic alcohol"));
-        list.add(new Product("A2", "Whiskey", 1475000, 73, "Imported alcohol"));
-        list.add(new Product("B1", "Tiger Beer", 15000, 302, "Domestic beer"));
-        list.add(new Product("B2", "Hanoi Beer", 10000, 331, "Domestic beer"));
-        list.add(new Product("A3", "Drum", 2050000, 15, "Imported alcohol"));
-        list.add(new Product("A4", "Chivas", 4320000, 17, "Imported alcohol"));
-        list.add(new Product("M2", "Milk type 2", 171000, 25, "Imported milk"));
+//        list.add(new Product("M1", "Milk type 1", 251000, 32, "Imported milk"));
+//        list.add(new Product("A1", "Táo mèo", 35000, 83, "Domestic alcohol"));
+//        list.add(new Product("A2", "Whiskey", 1475000, 73, "Imported alcohol"));
+//        list.add(new Product("B1", "Tiger Beer", 15000, 302, "Domestic beer"));
+//        list.add(new Product("B2", "Hanoi Beer", 10000, 331, "Domestic beer"));
+//        list.add(new Product("A3", "Drum", 2050000, 15, "Imported alcohol"));
+//        list.add(new Product("A4", "Chivas", 4320000, 17, "Imported alcohol"));
+//        list.add(new Product("M2", "Milk type 2", 171000, 25, "Imported milk"));
     }
 
     public void show() {
@@ -49,6 +46,7 @@ public class Management {
                 System.out.println("Wrong type input");
             }
         }
+        FileReadWrite.write(list);
     }
 
     public void update() {
@@ -87,10 +85,11 @@ public class Management {
         if (!check)
             System.out.println("ID not found");
 
+        FileReadWrite.write(list);
     }
 
     public void delete() {
-        while (true ){
+        while (true) {
             System.out.println("Input ID: ");
             String id = scanner.nextLine();
             if (id.equals(""))
@@ -111,7 +110,10 @@ public class Management {
 
             if (!check)
                 System.out.println("ID not found");
+            else
+                break;
         }
+        FileReadWrite.write(list);
     }
 
     public void sortByPrice() {
@@ -143,6 +145,7 @@ public class Management {
                     break;
             }
         }
+        FileReadWrite.write(list);
     }
 
     public void findHighestPrice() {
