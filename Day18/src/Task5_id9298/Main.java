@@ -2,11 +2,9 @@ package Task5_id9298;
 
 public class Main {
     public static void main(String[] args) {
-        OddThread oddThread = new OddThread();
-        EvenThread evenThread = new EvenThread();
 
-        Thread thread1 = new Thread(oddThread);
-        Thread thread2 = new Thread(evenThread);
+        Thread thread1 = new OddThread();
+        Thread thread2 = new EvenThread();
 
         thread1.start();
         try {
