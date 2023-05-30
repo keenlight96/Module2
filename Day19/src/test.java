@@ -14,5 +14,9 @@ public class test {
                 ar) {
             System.out.println(e);
         }
+
+        String a = "asd";
+        a.concat("123");
+        System.out.println(a.concat("123"));
     }
 }
